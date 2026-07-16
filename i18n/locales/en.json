@@ -1,0 +1,64 @@
+{
+  "header": {
+    "id": "DP — Frontend Engineer"
+  },
+  "hero": {
+    "name": "David Pilný",
+    "bio": "Builds interfaces in Vue and TypeScript. Co-founder of MIDAFIT, a fitness education platform. Reads 19th-century parish registers for fun.",
+    "statusLabel": "Status",
+    "status": "Open to work",
+    "place": "Praha · 50.08N 14.44E"
+  },
+  "work": {
+    "head": "Work"
+  },
+  "category": {
+    "product": "Product",
+    "client": "Client",
+    "play": "Play",
+    "writing": "Writing",
+    "signal": "Signal"
+  },
+  "detail": {
+    "back": "Index",
+    "role": "Role",
+    "period": "Period",
+    "stack": "Stack",
+    "url": "URL"
+  },
+  "cv": {
+    "title": "CV",
+    "experience": "Experience",
+    "education": "Education",
+    "languages": "Languages",
+    "skills": "Skills",
+    "thesis": "Thesis"
+  },
+  "footer": {
+    "email": "E-mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV",
+    "colophon": "Colophon"
+  },
+  "colophon": {
+    "title": "Colophon",
+    "programmeHead": "Colour programme",
+    "programmeIntro": "The palette on this site is generated, not chosen. One base hue; a regular polygon on the OKLCH colour wheel; equal chroma at every vertex, so each slot carries the same perceived saturation. Karl Gerstner called this writing a programme: state the rule, then let the rule produce the outcome.",
+    "lightness": "Two derived lightnesses. L 0.663 carries chips and swatches on chalk. L 0.520 carries any surface with chalk text on it — the highest lightness that holds 4.5:1 against chalk at every hue of the wheel, measured, so the slider below cannot break the contrast floor. Slot 3 runs its chroma at the sRGB ceiling (0.23): same geometry, louder. It marks status.",
+    "demo": "Drag. Every colour on this page derives from this one number. The choice is stored in your browser and nowhere else.",
+    "hue": "hue-base",
+    "polygon": "polygon",
+    "legendHead": "Legend",
+    "legendNote": "Colour never appears without meaning. Six hues meaning nothing is noise wearing a grid.",
+    "typeHead": "Type",
+    "typeBody": "Archivo, one variable file, width axis at 125% for display. JetBrains Mono for metadata. A 24px baseline; nothing below 11px.",
+    "gridHead": "Grid",
+    "gridBody": "12 columns · 24px gutters · 1280px max · guides shown as permanent hairlines.",
+    "gridHint": "Press g for the full grid and baseline.",
+    "sourcesHead": "Sources",
+    "sourcesQuote": "The grid is “a formal programme to accommodate x unknown items.”",
+    "stackHead": "Site",
+    "stackBody": "Nuxt 4, Nuxt Content, hand-written CSS custom properties — no utility framework, no colour library. Self-hosted fonts. Statically generated. No analytics, no cookies; localStorage holds the hue and nothing else."
+  }
+}

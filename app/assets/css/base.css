@@ -1,0 +1,145 @@
+/* Reset — flat, square, quiet. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0; /* §8 — the range slider thumb is the sole exception, set locally */
+}
+
+html {
+  /* clip, not hidden: kills the 100vw/scrollbar overflow from full-bleed
+     elements without creating a new scroll container */
+  overflow-x: clip;
+  background: var(--chalk);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--baseline);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  font-weight: 400;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* Focus states are solid colour blocks, not outlines (§6).
+   Keyboard navigation should look like a designed feature. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: none;
+  background: var(--ink);
+  color: var(--chalk);
+}
+
+/* Inputs can't be a block of themselves — they keep a hard ink outline. */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── print — Swiss design is a print tradition ────────────── */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html {
+    background: #fff;
+  }
+
+  /* grid guides drop out; chrome goes with them */
+  .grid-guides,
+  .header,
+  .footer {
+    display: none !important;
+  }
+
+  .grid {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* ── the page grid — every section is set on this ─────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  max-width: var(--grid-max);
+  margin-inline: auto;
+  padding-inline: var(--grid-margin);
+}
+
+/* ── type ──────────────────────────────────────────────────── */
+
+.type-display-xl {
+  font-family: var(--font-display);
+  font-stretch: var(--stretch-display);
+  font-weight: 600;
+  font-size: var(--size-display-xl);
+  line-height: var(--leading-display-xl);
+  letter-spacing: var(--tracking-display);
+}
+
+.type-display-l {
+  font-family: var(--font-display);
+  font-stretch: var(--stretch-display);
+  font-weight: 600;
+  font-size: var(--size-display-l);
+  line-height: var(--leading-display-l);
+  letter-spacing: var(--tracking-display);
+}
+
+.type-body {
+  font-size: var(--size-body);
+  line-height: var(--baseline);
+}
+
+.type-body-s {
+  font-size: var(--size-body-s);
+  line-height: var(--baseline);
+}
+
+.type-mono {
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  line-height: var(--baseline);
+  font-weight: 400;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}

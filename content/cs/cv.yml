@@ -1,0 +1,98 @@
+name: David Pilný
+role: Frontend inženýr — Vue
+location: Praha · CZ
+remote: Otevřen práci na dálku
+email: pilny.david@proton.me
+phone: +420 723 629 141
+github: https://github.com/david-pilny
+linkedin: https://www.linkedin.com/in/david-piln%C3%BD-1237b9198
+
+experience:
+  - company: Quanti s.r.o.
+    role: Frontend vývojář
+    period: 08/2023 —
+    note: Alokace na projekty Dr.Max · hybridně, Praha
+    category: client
+    projects:
+      - name: E-shop admin platforma
+        bullets:
+          - Spoluzodpovědný za administrační platformu se 70+ moduly pro 150+
+            interních uživatelů v pěti zemích (CZ, SK, PL, RO, IT).
+          - Vede migraci Vue 2 → Vue 3 + Nuxt; napsal automatizační migrační
+            skript; dvouměsíční stabilizační fáze.
+          - Platform team — technické standardy, sdílená knihovna komponent,
+            architektonická rozhodnutí.
+          - Onboarding, code review (~4 týdně) a správa oprávnění Azure DevOps
+            pro 15–20 vývojářů.
+          - Napsal dokumentaci ve VitePress, 20+ kapitol; čas na konzultace
+            klesl z 8–12 hodin týdně na jednu.
+      - name: Sledování zásilek · Vue 3, NestJS
+        bullets:
+          - Backendové integrace pěti dopravců, 100k+ unikátních requestů
+            měsíčně; údržba stávajících modulů dopravců.
+      - name: Media server · Go, Vue
+        bullets:
+          - Mikroservisa pro správu souborů v Go s admin GUI; tisíce souborů
+            v produkci.
+          - Vyřešil produkční memory bottleneck — validace OpenAPI načítala
+            celá request body do paměti; nahrazeno streamováním.
+      - name: Developer experience
+        bullets:
+          - Komponenta editoru kódu (à la VS Code) pro HTML e-mailové šablony
+            přímo v administraci.
+          - CI/CD pipeline na Dockeru a Azure Pipelines.
+  - company: MIDAFIT
+    role: Spoluzakladatel · frontend
+    period: 2023 —
+    note: Platforma pro fitness vzdělávání
+    category: product
+    projects:
+      - bullets:
+          - Kurzy, videolekce, členství. Nuxt se Supabase; celý frontend je
+            práce jednoho člověka.
+  - company: Všeobecná fakultní nemocnice v Praze
+    role: Programátor
+    period: 07/2021 — 07/2023
+    note: Poloviční úvazek · hybridně
+    category: client
+    projects:
+      - name: Nemocniční informační systém
+        bullets:
+          - Komponenty nemocničního informačního systému Zlatokop —
+            ObjectScript na InterSystems IRIS.
+          - Aplikace pro evidenci léků KPDPM — Vue 3, autentizace Azure AD,
+            Express backend.
+          - Správa projektů Etické komise — Angular, NgRx.
+          - Automatizace instalace v Bashi na RHEL 8; Python CGI skripty pro
+            PDF formuláře a rozesílání pošty.
+
+education:
+  degree: Bc., informatika
+  school: ČVUT v Praze
+  faculty: Fakulta biomedicínského inženýrství
+  period: 09/2020 — 06/2023
+  thesis: Segmentace rentgenových snímků aterosklerózy pomocí neuronových sítí
+  thesisTech: TensorFlow · Keras · Python
+
+languages:
+  - name: Čeština
+    level: rodilý mluvčí
+  - name: Angličtina
+    level: C1
+    cert: Cambridge CAE
+  - name: Ruština
+    level: B2
+    cert: TORFL II
+  - name: Němčina
+    level: B1
+    cert: Deutsches Sprachdiplom I
+
+skills:
+  - group: Hlavní
+    items: [Vue 2/3, Nuxt 3/4, TypeScript, Tailwind CSS, Vuetify]
+  - group: Backend
+    items: [Node.js, Express, NestJS, Go, Supabase, Nitro]
+  - group: Ops
+    items: [Docker, Azure DevOps, Argo CD, Git, Linux]
+  - group: Dále
+    items: [Angular, TensorFlow, Keras, Pandas, Figma]

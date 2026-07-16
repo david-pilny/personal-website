@@ -1,0 +1,90 @@
+/*
+ * Tokens — the whole page derives from these.
+ */
+
+:root {
+  /* ── colour anchors ─────────────────────────────────────── */
+  --chalk: oklch(0.955 0.008 91.5); /* #F2F0EA — page */
+  --ink: oklch(0.195 0.012 99.5);   /* #16150F — text, rules */
+  --hairline: oklch(from var(--ink) l c h / 0.06);
+  --rule: var(--ink); /* 1px structural rules are full ink */
+  /* dimmed text — 0.7 is the floor that keeps 11px labels ≥ 4.5:1 on chalk */
+  --dim: 0.7;
+
+  /* ── colour programme ───────────────────────────────────────
+   * Gerstner: don't pick a palette, write a programme. One hue,
+   * a polygon on the wheel, equal OKLCH chroma = equal perceived
+   * saturation. Rotating --hue-base recolours the entire site.
+   *
+   * Two derived lightnesses (contrast audit, 2026-07-16):
+   *   --l-accent  chips/swatches sitting on chalk
+   *   --l-deep    any surface carrying chalk text —
+   *               ≥ 4.5:1 at every hue of the wheel, so the
+   *               hue slider can never break the quality floor.
+   */
+  --hue-base: 156.8; /* MIDAFIT green — the anchor */
+  --polygon: 5;
+  --hue-step: calc(360 / var(--polygon));
+
+  --l-accent: 0.663;
+  --l-deep: 0.52;
+  --c-accent: 0.159;
+  --c-signal: 0.23; /* slot 3 only — chroma at the sRGB ceiling. An alarm. */
+
+  --hue-0: calc(var(--hue-base) + 0 * var(--hue-step));
+  --hue-1: calc(var(--hue-base) + 1 * var(--hue-step));
+  --hue-2: calc(var(--hue-base) + 2 * var(--hue-step));
+  --hue-3: calc(var(--hue-base) + 3 * var(--hue-step));
+  --hue-4: calc(var(--hue-base) + 4 * var(--hue-step));
+
+  --c-0: oklch(var(--l-accent) var(--c-accent) var(--hue-0));
+  --c-1: oklch(var(--l-accent) var(--c-accent) var(--hue-1));
+  --c-2: oklch(var(--l-accent) var(--c-accent) var(--hue-2));
+  --c-3: oklch(var(--l-accent) var(--c-signal) var(--hue-3));
+  --c-4: oklch(var(--l-accent) var(--c-accent) var(--hue-4));
+
+  --c-0-deep: oklch(var(--l-deep) var(--c-accent) var(--hue-0));
+  --c-1-deep: oklch(var(--l-deep) var(--c-accent) var(--hue-1));
+  --c-2-deep: oklch(var(--l-deep) var(--c-accent) var(--hue-2));
+  --c-3-deep: oklch(var(--l-deep) var(--c-signal) var(--hue-3));
+  --c-4-deep: oklch(var(--l-deep) var(--c-accent) var(--hue-4));
+
+  /* semantic mapping — the legend. Colour never appears without it. */
+  --color-product: var(--c-0);
+  --color-client: var(--c-1);
+  --color-play: var(--c-2);
+  --color-signal: var(--c-3);
+  --color-writing: var(--c-4);
+
+  --color-product-deep: var(--c-0-deep);
+  --color-client-deep: var(--c-1-deep);
+  --color-play-deep: var(--c-2-deep);
+  --color-signal-deep: var(--c-3-deep);
+  --color-writing-deep: var(--c-4-deep);
+
+  /* ── type ───────────────────────────────────────────────── */
+  --font-display: 'Archivo Variable', Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Archivo Variable', Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', Consolas, monospace;
+
+  /* scale — line heights are px so every block sits on the 24px baseline */
+  --size-display-xl: clamp(64px, 11vw, 148px);
+  --leading-display-xl: 0.86;
+  --size-display-l: clamp(32px, 5vw, 56px);
+  --leading-display-l: 0.95;
+  --size-body: 16px;    /* / 24px = one baseline */
+  --size-body-s: 13px;  /* / 24px */
+  --size-mono: 11px;    /* / 24px — nothing below 11px, ever */
+
+  --tracking-display: -0.035em;
+  --tracking-mono: 0.08em;
+
+  /* Archivo Expanded = the wdth axis at its ceiling */
+  --stretch-display: 125%;
+
+  /* ── grid ───────────────────────────────────────────────── */
+  --baseline: 24px;
+  --gutter: 24px;
+  --grid-max: 1280px;
+  --grid-margin: 24px;
+}

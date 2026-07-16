@@ -1,0 +1,64 @@
+{
+  "header": {
+    "id": "DP — Frontend inženýr"
+  },
+  "hero": {
+    "name": "David Pilný",
+    "bio": "Staví rozhraní ve Vue a TypeScriptu. Spoluzakladatel MIDAFIT, platformy pro fitness vzdělávání. Pro zábavu čte matriky z 19. století.",
+    "statusLabel": "Stav",
+    "status": "Otevřen nabídkám",
+    "place": "Praha · 50.08N 14.44E"
+  },
+  "work": {
+    "head": "Práce"
+  },
+  "category": {
+    "product": "Produkt",
+    "client": "Klient",
+    "play": "Hra",
+    "writing": "Psaní",
+    "signal": "Signál"
+  },
+  "detail": {
+    "back": "Rejstřík",
+    "role": "Role",
+    "period": "Období",
+    "stack": "Stack",
+    "url": "URL"
+  },
+  "cv": {
+    "title": "Životopis",
+    "experience": "Zkušenosti",
+    "education": "Vzdělání",
+    "languages": "Jazyky",
+    "skills": "Dovednosti",
+    "thesis": "Bakalářská práce"
+  },
+  "footer": {
+    "email": "E-mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "Životopis",
+    "colophon": "Kolofon"
+  },
+  "colophon": {
+    "title": "Kolofon",
+    "programmeHead": "Barevný program",
+    "programmeIntro": "Paleta tohoto webu je generovaná, ne vybraná. Jeden základní odstín; pravidelný mnohoúhelník na barevném kole OKLCH; stejná chroma v každém vrcholu, takže každý slot nese stejnou vnímanou sytost. Karl Gerstner tomu říkal psaní programu: stanovit pravidlo a nechat pravidlo vytvořit výsledek.",
+    "lightness": "Dvě odvozené světlosti. L 0,663 nesou čipy a vzorníky na křídě. L 0,520 nese každou plochu s křídovým textem — nejvyšší světlost, která drží kontrast 4,5:1 vůči křídě při každém odstínu kola, měřeno, takže posuvník níže nemůže prolomit kontrastní podlahu. Slot 3 má chromu na stropě sRGB (0,23): stejná geometrie, hlasitěji. Značí stav.",
+    "demo": "Táhněte. Každá barva na této stránce se odvozuje z tohoto jediného čísla. Volba se ukládá ve vašem prohlížeči a nikde jinde.",
+    "hue": "hue-base",
+    "polygon": "mnohoúhelník",
+    "legendHead": "Legenda",
+    "legendNote": "Barva se nikdy neobjevuje bez významu. Šest odstínů bez významu je šum v mřížce.",
+    "typeHead": "Písmo",
+    "typeBody": "Archivo, jeden variabilní soubor, osa šířky 125 % pro titulky. JetBrains Mono pro metadata. Účaří 24 px; nic pod 11 px.",
+    "gridHead": "Mřížka",
+    "gridBody": "12 sloupců · mezery 24 px · max. 1280 px · vodítka jako trvalé vlasové linky.",
+    "gridHint": "Stiskněte g pro celou mřížku a účaří.",
+    "sourcesHead": "Prameny",
+    "sourcesQuote": "Mřížka je „formální program pro x neznámých položek“.",
+    "stackHead": "Web",
+    "stackBody": "Nuxt 4, Nuxt Content, ručně psané CSS custom properties — žádný utility framework, žádná barevná knihovna. Písma hostovaná lokálně. Staticky generováno. Žádná analytika, žádné cookies; localStorage drží odstín a nic víc."
+  }
+}
