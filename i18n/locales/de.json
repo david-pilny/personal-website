@@ -1,6 +1,7 @@
 {
   "hero": {
     "status": "Offen für Angebote",
-    "statusLabel": "Status"
+    "statusLabel": "Status",
+    "toolsLabel": "Tägliche Tools"
   }
 }

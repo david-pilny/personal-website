@@ -7,7 +7,8 @@
     "bio": "Staví rozhraní ve Vue a TypeScriptu. Spoluzakladatel MIDAFIT, platformy pro fitness vzdělávání. Pro zábavu čte matriky z 19. století.",
     "statusLabel": "Stav",
     "status": "Otevřen nabídkám",
-    "place": "Praha · 50.08N 14.44E"
+    "place": "Praha · 50.08N 14.44E",
+    "toolsLabel": "Denní nástroje"
   },
   "work": {
     "head": "Práce"

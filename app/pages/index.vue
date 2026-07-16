@@ -30,10 +30,14 @@ useHead(() => ({
           <p class="type-body-s hero__bio">{{ t('hero.bio') }}</p>
         </div>
 
-        <div class="hero__status">
-          <p class="type-mono">{{ t('hero.statusLabel') }}</p>
-          <p class="type-display-l">{{ t('hero.status') }}</p>
-          <p class="type-mono">{{ t('hero.place') }}</p>
+        <div class="hero__side">
+          <div class="hero__status">
+            <p class="type-mono">{{ t('hero.statusLabel') }}</p>
+            <p class="type-display-l">{{ t('hero.status') }}</p>
+            <p class="type-mono">{{ t('hero.place') }}</p>
+          </div>
+
+          <ToolsGrid class="hero__tools" />
         </div>
       </section>
 
@@ -99,11 +103,14 @@ useHead(() => ({
   max-width: 34ch;
 }
 
+.hero__side {
+  grid-column: 9 / -1;
+  align-self: start;
+}
+
 /* Full-bleed to the right viewport edge; the loud zone.
    Compact — a signal tile, not a poster. */
 .hero__status {
-  grid-column: 9 / -1;
-  align-self: start;
   margin-right: calc(-1 * (var(--grid-margin) + max(0px, (100vw - var(--grid-max)) / 2)));
   min-height: 168px;
   background: var(--color-signal-deep);
@@ -116,6 +123,10 @@ useHead(() => ({
 .hero__status .type-display-l {
   flex: 1;
   padding-block: var(--baseline);
+}
+
+.hero__tools {
+  margin-top: calc(var(--baseline) * 2);
 }
 
 /* ── project index ────────────────────────────────────────── */
@@ -218,8 +229,11 @@ useHead(() => ({
     padding-bottom: calc(var(--baseline) * 2 - 1px);
   }
 
-  .hero__status {
+  .hero__side {
     grid-column: 1 / -1;
+  }
+
+  .hero__status {
     margin-left: calc(-1 * (var(--grid-margin) + max(0px, (100vw - var(--grid-max)) / 2)));
   }
 }

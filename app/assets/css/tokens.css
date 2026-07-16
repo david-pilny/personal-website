@@ -72,6 +72,7 @@
   --leading-display-xl: 0.86;
   --size-display-l: clamp(32px, 5vw, 56px);
   --leading-display-l: 0.95;
+  --size-body-l: 20px;  /* / 24px — entry headings */
   --size-body: 16px;    /* / 24px = one baseline */
   --size-body-s: 13px;  /* / 24px */
   --size-mono: 11px;    /* / 24px — nothing below 11px, ever */

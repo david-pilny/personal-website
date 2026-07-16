@@ -125,6 +125,13 @@ textarea:focus-visible {
   letter-spacing: var(--tracking-display);
 }
 
+.type-body-l {
+  font-size: var(--size-body-l);
+  line-height: var(--baseline);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 .type-body {
   font-size: var(--size-body);
   line-height: var(--baseline);

@@ -1,6 +1,7 @@
 {
   "hero": {
     "status": "Открыт к предложениям",
-    "statusLabel": "Статус"
+    "statusLabel": "Статус",
+    "toolsLabel": "Ежедневные инструменты"
   }
 }

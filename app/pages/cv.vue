@@ -25,7 +25,7 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
       <header class="cv__head">
         <div>
           <h1 class="type-display-l">{{ cv.name }}</h1>
-          <p class="type-body-s cv__role">{{ cv.role }}</p>
+          <p class="type-body cv__role">{{ cv.role }}</p>
         </div>
         <address class="type-mono cv__contact">
           <a :href="`mailto:${cv.email}`">{{ cv.email }}</a>
@@ -50,13 +50,13 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
               {{ entry.period }}
             </div>
             <div class="cv__body">
-              <h3 class="type-body cv__company">
+              <h3 class="type-body-l cv__company">
                 {{ entry.company }} — {{ entry.role }}
               </h3>
               <p v-if="entry.note" class="type-mono cv__note">{{ entry.note }}</p>
               <div v-for="(proj, i) in entry.projects" :key="i" class="cv__project">
                 <h4 v-if="proj.name" class="type-mono cv__project-name">{{ proj.name }}</h4>
-                <ul class="type-body-s cv__bullets">
+                <ul class="type-body cv__bullets">
                   <li v-for="bullet in proj.bullets" :key="bullet">{{ bullet }}</li>
                 </ul>
               </div>
@@ -72,11 +72,11 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
           <article class="cv__entry">
             <div class="type-mono cv__period">{{ cv.education.period }}</div>
             <div class="cv__body">
-              <h3 class="type-body cv__company">
+              <h3 class="type-body-l cv__company">
                 {{ cv.education.school }} — {{ cv.education.degree }}
               </h3>
               <p class="type-mono cv__note">{{ cv.education.faculty }}</p>
-              <ul class="type-body-s cv__bullets">
+              <ul class="type-body cv__bullets">
                 <li>{{ t('cv.thesis') }}: {{ cv.education.thesis }} ({{ cv.education.thesisTech }})</li>
               </ul>
             </div>
@@ -91,7 +91,7 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
           <div v-for="lang in cv.languages" :key="lang.name" class="cv__entry cv__lang">
             <div class="type-mono cv__period">{{ lang.level }}</div>
             <div class="cv__body cv__lang-body">
-              <span class="type-body-s">{{ lang.name }}</span>
+              <span class="type-body">{{ lang.name }}</span>
               <span v-if="lang.cert" class="type-mono cv__note">{{ lang.cert }}</span>
             </div>
           </div>
@@ -105,7 +105,7 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
           <div v-for="group in cv.skills" :key="group.group" class="cv__entry cv__lang">
             <div class="type-mono cv__period">{{ group.group }}</div>
             <div class="cv__body">
-              <span class="type-body-s">{{ group.items.join(' · ') }}</span>
+              <span class="type-body">{{ group.items.join(' · ') }}</span>
             </div>
           </div>
         </div>
@@ -177,6 +177,12 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
   grid-template-columns: subgrid;
 }
 
+/* a hairline between entries — same device as the work table */
+.cv__entry + .cv__entry:not(.cv__lang) {
+  border-top: 1px solid var(--hairline);
+  padding-top: calc(var(--baseline) - 1px);
+}
+
 /* subgrid inside .cv__entries: its col 1 = page col 3 */
 .cv__period {
   grid-column: 1 / span 2;
@@ -201,7 +207,7 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
 }
 
 .cv__company {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .cv__note {
@@ -212,8 +218,9 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
   padding-top: var(--baseline);
 }
 
+/* a name, not metadata — full ink, heavier */
 .cv__project-name {
-  opacity: var(--dim);
+  font-weight: 700;
 }
 
 .cv__bullets {
@@ -357,6 +364,28 @@ useHead(() => ({ title: `${t('cv.title')} — David Pilný` }))
   /* flex gaps die inside table cells — restore the spacing */
   .cv__lang-body > * {
     margin-right: var(--gutter);
+  }
+
+  /* print keeps the compact scale — the screen bump would push past two pages */
+  .cv__company {
+    font-size: var(--size-body);
+    letter-spacing: 0;
+  }
+
+  .cv__role,
+  .cv__bullets,
+  .cv__body .type-body {
+    font-size: var(--size-body-s);
+  }
+
+  .cv__project-name {
+    font-weight: 400;
+    opacity: var(--dim);
+  }
+
+  .cv__entry + .cv__entry:not(.cv__lang) {
+    border-top: none;
+    padding-top: 0;
   }
 
   /* compact rows for languages/skills so the document holds two pages */
